@@ -1,0 +1,13 @@
+body{
+	background: black;
+	font-family:"Nunito", sans-serif;
+}
+.thumbnail img{
+	width:100%;
+}
+.thumbnail .caption{
+	padding:9px;
+}
+.delete-form{
+	display: inline;
+}

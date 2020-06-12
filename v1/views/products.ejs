@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+<header class="jumbotron">
+	<div class="container" style="margin: 10 0">
+	<h1>
+		MOOD<span>/</span>BOARD
+		
+	</h1>
+	<p>
+		Exciting Room Designs, Posters and much more!
+	</p>
+	<p>
+	<a class="btn btn-dark btn-large" href="/products/new">Suggest a New Product</a>
+	</p>
+	</div>
+</header>
+
+<div class="row text-center">
+	<% product.forEach(function(product){ %>
+	<div class="col-md-3 col-sm-6">
+		<div class="thumbnail">
+		<img src="<%= product.image%>" class="img-thumbnail">
+		<div class="caption">
+		<h4><%= product.name %> </h4>
+			</div>
+		</div>
+	</div>
+<% }) %>
+	</div>
+</div>	
+<%- include("partials/footer.ejs") %>
+	

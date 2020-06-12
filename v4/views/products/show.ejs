@@ -1,0 +1,28 @@
+<%- include("../partials/header.ejs") %>
+<div class="container">
+	
+<h1 style="margin-top:100px">
+	
+	<%= products.name %>
+	
+</h1>
+<div>
+<img src="<%= products.image%>">	
+
+</div>
+<p>
+	balndasjkvbsdjbnvaksn content content content content content
+	
+</p>
+<p>
+	<a href="/index/<%= products._id%>/comments/new" class="btn btn-success">Add new comment</a>
+	</p>
+<% products.comments.forEach(function(comment){ %>
+		<p>
+			<strong><%= comment.author %></strong>
+			- <%= comment.text %>
+	</p>					 
+<%	 }) %>
+</div>
+<%- include("../partials/footer.ejs") %>
+	
